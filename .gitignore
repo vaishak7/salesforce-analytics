@@ -1,0 +1,6 @@
+.env
+*.p8
+*.pub
+.venv/
+__pycache__/
+logs/

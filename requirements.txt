@@ -1,0 +1,5 @@
+simple-salesforce>=1.12.6,<2
+snowflake-connector-python[pandas]>=3.12,<5
+pandas>=2.0,<3
+python-dotenv>=1.0,<2
+tenacity>=8.2,<10

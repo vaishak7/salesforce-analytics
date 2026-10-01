@@ -29,8 +29,8 @@ def setup_logging():
         level=logging.INFO,
         format="%(asctime)s | %(levelname)-7s | %(message)s",
         handlers=[
-            logging.StreamHandler(),                    # print to the terminal
-            logging.FileHandler("logs/extract.log"),    # and save to a file
+            logging.StreamHandler(),  # print to the terminal
+            logging.FileHandler("logs/extract.log"),  # and save to a file
         ],
     )
 

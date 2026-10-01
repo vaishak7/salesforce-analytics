@@ -40,6 +40,7 @@ def connect_snowflake():
 
 # ---------- Salesforce side ----------
 
+
 def get_fields(sf, object_name):
     describe = getattr(sf, object_name).describe()
     return [f["name"] for f in describe["fields"] if f["type"] not in SKIP_FIELD_TYPES]
@@ -66,6 +67,7 @@ def to_utc(sf_timestamp):
 
 
 # ---------- Snowflake side ----------
+
 
 def create_tables(cur):
     cur.execute(f"""
@@ -148,6 +150,7 @@ def save_watermark(cur, object_name, new_watermark, rows_inserted):
 
 
 # ---------- Main flow ----------
+
 
 def main():
     sf = connect_salesforce()

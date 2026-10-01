@@ -86,9 +86,7 @@ class SnowflakeLoader:
         # Insert in batches so large objects don't build one giant statement
         for start in range(0, len(rows), BATCH_SIZE):
             batch = rows[start : start + BATCH_SIZE]
-            self.cur.executemany(
-                f"INSERT INTO {table}_LANDING VALUES (%s, %s, %s, %s)", batch
-            )
+            self.cur.executemany(f"INSERT INTO {table}_LANDING VALUES (%s, %s, %s, %s)", batch)
 
         self.cur.execute(f"""
             MERGE INTO {table} t

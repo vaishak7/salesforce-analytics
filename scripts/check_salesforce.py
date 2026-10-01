@@ -9,7 +9,6 @@ sf = Salesforce(
     consumer_key=os.environ["SF_CONSUMER_KEY"],
     consumer_secret=os.environ["SF_CONSUMER_SECRET"],
     domain=os.environ["SF_DOMAIN"],
-
 )
 print("Connected to:", sf.sf_instance)
 
